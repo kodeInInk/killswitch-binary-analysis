@@ -1,0 +1,22 @@
+O = everything stopped, X = something kept running
+
+obedient: nothing risky
+polite O  kill -9 O  group O  tree O  
+
+stubborn: catches SIGTERM
+polite X  kill -9 O  group O  tree O  
+
+orphan: forks
+polite X  kill -9 X  group O  tree O  
+
+runaway: forks, setsid
+polite X  kill -9 X  group X  tree O  
+
+leashed: forks, leashed
+polite O  kill -9 O  group O  tree O  
+
+sneaky: catches SIGTERM, forks, setsid (raw)
+polite X  kill -9 X  group X  tree O  
+
+devserver.sh: script, nothing to read
+polite X  kill -9 X  group O  tree O  
