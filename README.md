@@ -2,6 +2,8 @@
 
 Does "just turn it off" actually turn it off?
 
+[Slides](slides/killswitch-bianry-analysis.pdf) | [Demo programs](demo) | [Source](audit.c)
+
 This tool checks whether a program, and every process it started, really stops when you kill it. It reads the program's machine code to predict what will happen, then runs it and tries to kill it four different ways.
 
 ```
